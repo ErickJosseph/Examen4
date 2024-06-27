@@ -56,8 +56,8 @@ namespace Datos
                 while (reader.Read())
                 {
                     int RegionId = reader["RegionId"] != DBNull.Value ? Convert.ToInt32(reader["RegionId"]) : 0;
-                    string NombreRegion = reader["RegionName"] != DBNull.Value ? Convert.ToInt32(reader["RegionName"]) : 0;
-                    string EstadoRegion = reader["[Enabled]"] != DBNull.Value ? Convert.ToInt32(reader["[Enabled]"]) : 0;
+                    string NombreRegion = reader["RegionName"] != DBNull.Value ? Convert.ToString(reader["RegionName"]) : "";
+                    string EstadoRegion = reader["[Enabled]"] != DBNull.Value ? Convert.ToString(reader["[Enabled]"]) : "";
                 }
             }
 
